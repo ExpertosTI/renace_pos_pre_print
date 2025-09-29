@@ -6,32 +6,65 @@ Módulo de Odoo para pre-impresión de recibos en punto de venta minorista.
 
 Permite imprimir una pre-cuenta en el punto de venta minorista similar al punto de venta tipo restaurante.
 
-## Información del Módulo
+## Instalación
 
-- **Versión:** 17.0.1.0.0
-- **Categoría:** Point of Sale
-- **Autor:** RENACE.TECH
-- **Mantenedor:** Adderly Marte <adderlymarte@renace.tech>
-- **Licencia:** LGPL-3
+1. Copia el módulo a tu directorio de addons de Odoo 18.0
+2. Actualiza la lista de módulos: `Apps > Update Apps List`
+3. Busca "Botón de Impresión de Factura POS" e instala el módulo
+
+## Uso
+
+Una vez instalado:
+1. Ve al **Punto de Venta**
+2. Agrega productos a una orden
+3. Verás el botón **"Cuenta"** con ícono de Impresora
+4. Haz clic para imprimir la cuenta/recibo
 
 ## Dependencias
 
+- `base`
 - `point_of_sale`
-- `pos_restaurant`
 
-## Instalación
+## Compatibilidad
 
-1. Copia el módulo en tu directorio de addons de Odoo
-2. Actualiza la lista de aplicaciones
-3. Instala el módulo "POS Pre Impresión"
+- **Odoo 18.0**
+- Versiones anteriores (usar rama correspondiente)
 
-## Configuración
+## Estructura del Módulo
 
-El módulo incluye configuraciones adicionales en Configuración > Punto de Venta.
+```
+renace_pos_pre_print/
+├── __manifest__.py          # Configuración del módulo
+├── __init__.py             # Inicialización
+├── static/
+│   └── src/
+│       ├── js/
+│       │   └── pos_print_bill_button.js    # Lógica JavaScript
+│       └── xml/
+│           └── pos_print_bill_button.xml   # Template del botón
+└── README.md
+```
 
-## Soporte
+## Changelog
 
-- **Website:** https://renace.tech
+### Version 18.0.0.1
+- **Migración a Odoo 18.0**
+- **Traducción completa al español**
+- **Funcionalidad de Impresión real implementada**
+- **Interfaz actualizada para Odoo 18.0**
+
+## Licencia
+
+OPL-1
+
+## Autor
+
+**Adderly Marte**  
+Website: [renace.tech](https://renace.tech)
+
+---
+
+*Desarrollado por renace.tech para Odoo 18.0*
 - **Email:** adderlymarte@renace.tech
 
 ---
